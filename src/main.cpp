@@ -1,18 +1,26 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+typedef enum 
+{
+  SAFE_LOCKED,
+  LEVEL_1_UNLOCKED,
+  LEVEL_2_UNLOCKED,
+  LEVEL_3_UNLOCKED,
+  SAFE_OPEN
+} State_t;
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
-}
+typedef enum 
+{
+  INPUT_1_ACCEPTED,
+  INPUT_2_ACCEPTED,
+  INPUT_3_ACCEPTED
+} Event_t;
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+State_t state = LEVEL_1_UNLOCKED
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void state_maschine(Event_t event) {
+  switch(state){
+    case SAFE_LOCKED:
+    if ()
+  }
 }
