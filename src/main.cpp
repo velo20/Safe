@@ -16,7 +16,7 @@ typedef enum
   INPUT_3_ACCEPTED
 } Event_t;
 
-State_t state = LEVEL_1_UNLOCKED
+State_t state = LEVEL_1_UNLOCKED;
 
 void state_maschine(Event_t event) {
   switch(state){
